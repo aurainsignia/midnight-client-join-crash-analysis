@@ -1,0 +1,7 @@
+# Full process minidumps -- large and may contain process memory
+# (Steam session tickets, recent chat, typed passwords, etc.).
+# Keep locally for analysis; never publish.
+*.dmp
+
+# Claude Code local session state
+.claude/
