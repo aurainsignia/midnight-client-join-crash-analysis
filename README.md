@@ -230,4 +230,4 @@ pathological payloads), but worth a once-over.
   address-pattern stack scan.
 - `analysis_output.txt` — captured output of running the analyzer
   against `gmod.exe.29108.dmp`.
-- `INVESTIGATION.md` — this file.
+- `README.md` — this file.
