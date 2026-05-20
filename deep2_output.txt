@@ -1,0 +1,14 @@
+﻿MemoryInfoListStream: header=24, entry=32, count=51539607688
+python : Traceback (most recent call last):
+At line:1 char:32
++ ... NG="utf-8"; python "C:\Users\Chris\Desktop\dubiousnet\bugs\gmod clien ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Chris\Desktop\dubiousnet\bugs\gmod client crash on third party zs server 2026-05-19\deep2.py", line 
+58, in <module>
+    base, alloc_base, alloc_prot, _, rsize, state, prot, typ, _ = struct.unpack_from("<QQIIQIII I", dmp, off)
+                                                                  ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 91672616 bytes for unpacking 48 bytes at offset 91672568 
+(actual buffer size is 91672601)

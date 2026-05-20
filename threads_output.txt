@@ -1,0 +1,146 @@
+﻿=== Threads ===
+  TID=  424 sus=0 RIP=00007ffcdd3e5954 ntdll.dll+0x165954                                           stack=[0x6600a0f968..0x6600a10000)
+  TID= 1356 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66004afb98..0x66004b0000)
+  TID= 2076 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d85f7a8..0x667d860000)
+  TID= 3468 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660052f858..0x6600530000)
+  TID= 3760 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660017fa08..0x6600180000)
+  TID= 3936 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d87fd18..0x667d880000)
+  TID= 4512 sus=0 RIP=00007ffcdafdae24 win32u.dll+0xae24                                            stack=[0x667ec7fab8..0x667ec80000)
+  TID= 4896 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660118f6f8..0x6601190000)
+  TID= 5516 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667deff8e8..0x667df00000)
+  TID= 6248 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667ffff458..0x6680000000)
+  TID= 6936 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x6601aff578..0x6601b00000)
+  TID= 7040 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x6600e8f718..0x6600e90000)
+  TID= 7324 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667e07f618..0x667e080000)
+  TID= 7396 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667e7ffde8..0x667e800000)
+  TID= 9136 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d83f8b8..0x667d840000)
+  TID= 9316 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d8dfa98..0x667d8e0000)
+  TID= 9488 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x660100f4d8..0x6601010000)
+  TID=10468 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x6600d0f658..0x6600d10000)
+  TID=11952 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66004ef9a8..0x66004f0000)
+  TID=11980 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d84fb88..0x667d850000)
+  TID=12384 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660133f768..0x6601340000)
+  TID=13516 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660055fa78..0x6600560000)
+  TID=14124 sus=0 RIP=00007ffcdd3e5954 ntdll.dll+0x165954                                           stack=[0x660197f858..0x6601980000)
+  TID=14484 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667c3df888..0x667c3e0000)
+  TID=14696 sus=0 RIP=00007ffcdd3e5954 ntdll.dll+0x165954                                           stack=[0x660167f748..0x6601680000)
+  TID=14956 sus=0 RIP=00007ffcdd3e2324 ntdll.dll+0x162324                                           stack=[0x667d37f298..0x667d380000)
+  TID=15932 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660058f648..0x6600590000)
+  TID=16236 sus=0 RIP=00007ffc1f44b5dc engine.dll+0x33b5dc                                          stack=[0x667cd7ebd0..0x667cd80000)  <<< CRASH THREAD
+  TID=16264 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d89fa98..0x667d8a0000)
+  TID=17644 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667e37f928..0x667e380000)
+  TID=17796 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667e67fbb8..0x667e680000)
+  TID=17952 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66002ff5e8..0x6600300000)
+  TID=18236 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660053fd08..0x6600540000)
+  TID=18316 sus=0 RIP=00007ffc00bb5abc libcef.dll+0x2255abc                                         stack=[0x667f3fd648..0x667f400000)
+  TID=18824 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x660088f578..0x6600890000)
+  TID=18964 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667f57f988..0x667f580000)
+  TID=19404 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660047f7c8..0x6600480000)
+  TID=19708 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667edff738..0x667ee00000)
+  TID=20044 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66004cfc98..0x66004d0000)
+  TID=20084 sus=0 RIP=00007ffcdafdae24 win32u.dll+0xae24                                            stack=[0x667f87f9b8..0x667f880000)
+  TID=20208 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667e97fcc8..0x667e980000)
+  TID=20404 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x660070f478..0x6600710000)
+  TID=20516 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660048fcb8..0x6600490000)
+  TID=20700 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667c3ffc78..0x667c400000)
+  TID=20960 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667c3efb88..0x667c3f0000)
+  TID=21148 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x6600b8f6b8..0x6600b90000)
+  TID=21312 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x66011bf288..0x66011c0000)
+  TID=21320 sus=0 RIP=00007ffcdd3e58f4 ntdll.dll+0x1658f4                                           stack=[0x667fb7f858..0x667fb80000)
+  TID=24052 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667dbff5f8..0x667dc00000)
+  TID=24308 sus=0 RIP=00007ffcdd3e1dc4 ntdll.dll+0x161dc4                                           stack=[0x667eaffb18..0x667eb00000)
+  TID=24608 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66014bf588..0x66014c0000)
+  TID=24832 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d88f7d8..0x667d890000)
+  TID=25884 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667dd7fa58..0x667dd80000)
+  TID=25956 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d80f628..0x667d810000)
+  TID=26308 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d8cfdb8..0x667d8d0000)
+  TID=26344 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660054fca8..0x6600550000)
+  TID=27040 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667c7638d8..0x667c780000)
+  TID=27916 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d81f7f8..0x667d820000)
+  TID=27992 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d82fc88..0x667d830000)
+  TID=28036 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66004df6a8..0x66004e0000)
+  TID=28044 sus=0 RIP=00007ffcdafdae24 win32u.dll+0xae24                                            stack=[0x667f6ffc08..0x667f700000)
+  TID=28312 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660049fb58..0x66004a0000)
+  TID=28496 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66004ff7a8..0x6600500000)
+  TID=28624 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667ceff6c8..0x667cf00000)
+  TID=28720 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d86f698..0x667d870000)
+  TID=28816 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x66014ff938..0x6601500000)
+  TID=28888 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66017ff998..0x6601800000)
+  TID=29156 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667e4ff658..0x667e500000)
+  TID=29224 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660051fe08..0x6600520000)
+  TID=29228 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x66004bf688..0x66004c0000)
+  TID=29272 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660057fdd8..0x6600580000)
+  TID=29292 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d8bfa18..0x667d8c0000)
+  TID=30004 sus=0 RIP=00007ffcdd3e5954 ntdll.dll+0x165954                                           stack=[0x667da6f758..0x667da70000)
+  TID=30016 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667d4fee08..0x667d500000)
+  TID=30064 sus=0 RIP=00007ffcdafdae24 win32u.dll+0xae24                                            stack=[0x667fe7f478..0x667fe80000)
+  TID=30248 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d8afd98..0x667d8b0000)
+  TID=30300 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660050fb08..0x6600510000)
+  TID=30392 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x660056fbd8..0x6600570000)
+  TID=30444 sus=0 RIP=00007ffcdd3e27f4 ntdll.dll+0x1627f4                                           stack=[0x667e1ff2c8..0x667e200000)
+  TID=30468 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667d8eeec8..0x667d8f0000)
+  TID=30504 sus=0 RIP=00007ffcdd3e1d24 ntdll.dll+0x161d24                                           stack=[0x667fcff3c8..0x667fd00000)
+
+=== Threads with RIP in game-DLL code (not waiting in kernel) ===
+  TID=16236 RIP=00007ffc1f44b5dc  engine.dll+0x33b5dc  <<< CRASH THREAD
+           rsp+0x0018: lua_shared.dll+0x6c1a7
+           rsp+0x0028: engine.dll+0x33b572
+           rsp+0x0058: lua_shared.dll+0x6db9b
+           rsp+0x0068: engine.dll+0x35f958
+           rsp+0x00c8: engine.dll+0x364851
+           rsp+0x00f8: engine.dll+0x364a1f
+           rsp+0x0100: engine.dll+0xdd006e
+           rsp+0x0128: engine.dll+0x352a43
+           rsp+0x0148: engine.dll+0x422c40
+           rsp+0x0168: engine.dll+0x351403
+           rsp+0x0198: engine.dll+0x364815
+           rsp+0x01c8: engine.dll+0x34da1c
+           rsp+0x01f8: engine.dll+0x350215
+           rsp+0x0228: lua_shared.dll+0x6bab5
+           rsp+0x0238: engine.dll+0x34ff12
+           rsp+0x0270: engine.dll+0x38773a
+           rsp+0x02d0: lua_shared.dll+0xbf6c0
+           rsp+0x0448: kernelbase.dll+0x3885f
+           rsp+0x0518: lua_shared.dll+0x1b1df
+           rsp+0x0558: libcef.dll+0x16a0002
+           rsp+0x0568: lua_shared.dll+0x1b80e
+  TID=18316 RIP=00007ffc00bb5abc  libcef.dll+0x2255abc
+           rsp+0x0000: libcef.dll+0x5cca36b
+           rsp+0x0020: libcef.dll+0x27eeb0b
+           rsp+0x0038: libcef.dll+0x734e578
+           rsp+0x00c0: libcef.dll+0x5ccd49c
+           rsp+0x00d0: libcef.dll+0x3fe16b
+           rsp+0x00f8: libcef.dll+0x5ccf260
+           rsp+0x0100: libcef.dll+0x16a0000
+           rsp+0x0160: libcef.dll+0x13a98b5
+           rsp+0x0170: libcef.dll+0x72046b6
+           rsp+0x01a0: libcef.dll+0x5cc9f71
+           rsp+0x01c0: libcef.dll+0x2588d6b
+           rsp+0x02e8: libcef.dll+0x79af530
+           rsp+0x0320: libcef.dll+0x5ccd18d
+           rsp+0x0330: libcef.dll+0x5ccca1c
+           rsp+0x0368: libcef.dll+0x5ccd3e0
+           rsp+0x0430: libcef.dll+0x59c58c
+           rsp+0x04d0: libcef.dll+0x4553
+           rsp+0x04d8: libcef.dll+0x734e500
+           rsp+0x04f0: libcef.dll+0x5ccd380
+           rsp+0x0500: libcef.dll+0x10ada7f
+           rsp+0x0560: libcef.dll+0x5cd0f44
+
+=== Misc Info Stream (type 24) ===
+  SizeOfInfo=18  Flags1=0x5ef4  ProcessId=51330
+  hex first 0x80:
+    +0x00: 12 00 00 00 f4 5e 00 00 82 c8 00 00 00 00 00 00   .....^..........
+    +0x10: a0 11 00 00 9e c8 00 00 00 00 00 00 fc 4c 00 00   .............L..
+    +0x20: be c8 00 00 00 00 00 00 8c 47 00 00 f2 c8 00 00   .........G......
+    +0x30: 00 00 00 00 14 4a 00 00 16 c9 00 00 00 00 00 00   .....J..........
+    +0x40: 8c 6d 00 00 32 c9 00 00 00 00 00 00 74 4e 00 00   .m..2.......tN..
+    +0x50: 92 c9 00 00 00 00 00 00 48 53 00 00 02 ca 00 00   ........HS......
+    +0x60: 00 00 00 00 28 77 00 00 32 ca 00 00 00 00 00 00   ....(w..2.......
+    +0x70: 70 75 00 00 8a ca 00 00 00 00 00 00 68 18 00 00   pu..........h...
+
+=== Search for the GUID '914fa858-b8e7-480e-b4a7-c05093ef0bb0' in dump ===
+  ASCII hits: 0
+  UTF-16 hits: 1
+    file offset 0x50a9f3f
+      -> VA 0x000000667cd7f5b0

@@ -1,0 +1,70 @@
+﻿
+#### CALLERS of engine.dll+0x21bba0 (engine_Sys_FPrintf(selector, fmt, ...))  � 32 sites
+   call at 0x21a8a0  in fn 0x21a890  fmt="-Console Buffer-\n================\n"
+   call at 0x21a8dc  in fn 0x21a8ba  fmt="%s"
+   call at 0x21ac80  in fn 0x21ac30  fmt="%s\n"
+   call at 0x261906  in fn 0x261888  fmt=" {0x%x, 0x%x}"
+   call at 0x261927  in fn 0x261888  fmt=" {0x%x, 0x%x}"
+   call at 0x2619ce  in fn 0x2619a6  fmt="\n    combined CRCs: stored = 0x%x, computed = 0x%x"
+   call at 0x261bce  in fn 0x261ba0  fmt="\n\nbzip2/libbzip2: internal error number %d.\nThis is a bug in bzip2/libbzip2, %s.\nPlease report it to me at: jseward@acm.org.  If this happened\nwhen you wer"
+   call at 0x261bef  in fn 0x261ba0  fmt="\n\nbzip2/libbzip2: internal error number %d.\nThis is a bug in bzip2/libbzip2, %s.\nPlease report it to me at: jseward@acm.org.  If this happened\nwhen you wer"
+   call at 0x2634c6  in fn 0x263476  fmt="    block %d: crc = 0x%8x, combined CRC = 0x%8x, size = %d\n"
+   call at 0x263cbe  in fn 0x2639e5  fmt="    final combined CRC = 0x%x\n   "
+   call at 0x2640c7  in fn 0x264096  fmt="      %d in block, %d after MTF & 1-2 coding, %d+2 syms in use\n"
+   call at 0x2642c0  in fn 0x2641ab
+   call at 0x2658a8  in fn 0x264380  fmt="      pass %d: size is %d, grp uses are "
+   call at 0x2658cc  in fn 0x264380
+   call at 0x2658ed  in fn 0x264380  fmt="%d "
+   call at 0x265d12  in fn 0x264380  fmt="      bytes: mapping %d, "
+   call at 0x265f0e  in fn 0x264380  fmt="selectors %d, "
+   call at 0x266195  in fn 0x264380  fmt="code lengths %d, "
+   call at 0x2679c4  in fn 0x267995  fmt="codes %d\n"
+   call at 0x268167  in fn 0x2679e0  fmt="\n    [%d: huff+mtf "
+   call at 0x26980c  in fn 0x2679e0  fmt="rt+rld"
+   call at 0x26a327  in fn 0x26a300  fmt="      %d work, %d block, ratio %5.2f\n"
+   call at 0x26a359  in fn 0x26a340  fmt="    too repetitive; using fallback sorting algorithm\n"
+   call at 0x26a79c  in fn 0x26a750  fmt="        bucket sorting ...\n"
+   call at 0x26ae9d  in fn 0x26a750  fmt="        depth %6d has "
+   call at 0x26b0e8  in fn 0x26a750  fmt="%6d unresolved strings\n"
+   call at 0x26b135  in fn 0x26a750  fmt="        reconstructing block ...\n"
+   call at 0x26bcd3  in fn 0x26bc80  fmt="        main sort initialise ...\n"
+   call at 0x26c02b  in fn 0x26bc80  fmt="        bucket sorting ...\n"
+   call at 0x26c3e6  in fn 0x26bc80  fmt="        qsort [0x%x, 0x%x]   done %d   this %d\n"
+   call at 0x26c76b  in fn 0x26bc80  fmt="        %d pointers, %d sorted, %d scanned\n"
+   call at 0x27735d  in fn 0x277320  fmt="%s\n"
+
+#### CALLERS of engine.dll+0x21bbf0 (engine_Sys_FPrintf_variant(int_arg, selector, fmt, ...))  � 8 sites
+   call at 0x219ba2  in fn 0x219b70  fmt="%s"
+   call at 0x21acb9  in fn 0x21ac30  fmt="%s\n"
+   call at 0x21b7c4  in fn 0x21b6f0  fmt="%s"
+   call at 0x24d040  in fn 0x24d020  fmt="%s"
+   call at 0x2b6ff1  in fn 0x2b6f80  fmt="Not a RIFF File [%s]\n"
+   call at 0x32cf3c  in fn 0x32cd87  fmt="Blending mip%d %dx%d to"
+   call at 0x32cf71  in fn 0x32cd87  fmt="   %c=%d ~%d%%"
+   call at 0x32cf99  in fn 0x32cd87  fmt="   %c=%d ~%d%%"
+
+#### CALLERS of engine.dll+0xa8170 (FILE_lookup_by_selector)  � 15 sites
+   call at 0xa81a1  in fn 0xa8180
+   call at 0xbe92e  in fn 0xbe900
+   call at 0xbf0c0  in fn 0xbf0a0
+   call at 0x160230  in fn 0x160210
+   call at 0x21bbc1  in fn 0x21bba0
+   call at 0x21bc20  in fn 0x21bbf0
+   call at 0x2352b3  in fn 0x235280
+   call at 0x235344  in fn 0x235310
+   call at 0x26126a  in fn 0x261240
+   call at 0x29f622  in fn 0x29f600
+   call at 0x29fa36  in fn 0x29fa10
+   call at 0x29fac6  in fn 0x29faa0
+   call at 0x29fb66  in fn 0x29fb40
+   call at 0x2a7030  in fn 0x2a7010
+   call at 0x333b0c  in fn 0x333b08
+
+
+#### Function 0xa8170 (FILE_lookup_by_selector) disassembly
+
+
+#### Locate parent of funclet 0x21a8ba (UNW_FLAG_CHAININFO)
+   funclet unwind RVA 0x46f474: 210502000534060090a82100baa82100849f44002100000090a82100baa82100
+   ver=1 flags=0x4 prolog=5 codes=2 fr=0x0
+   chained parent RUNTIME_FUNCTION: 0x21a890..0x21a8ba  unwind=0x449f84

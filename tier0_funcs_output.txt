@@ -1,0 +1,301 @@
+﻿
+#### tier0+0x1c950..0x1ca57 (263 bytes) — PARENT — wrapper containing call to 0x7ef0 (RA +0x1ca21 on stack)
+  0001c950  4053                   push     rbx    <<< ENTRY
+  0001c952  4883ec30               sub      rsp, 0x30
+  0001c956  48896c2440             mov      qword ptr [rsp + 0x40], rbp
+  0001c95b  488bd9                 mov      rbx, rcx
+  0001c95e  4889742448             mov      qword ptr [rsp + 0x48], rsi
+  0001c963  48897c2450             mov      qword ptr [rsp + 0x50], rdi
+  0001c968  0f1f840000000000       nop      dword ptr [rax + rax]
+  0001c970  488b8b18010000         mov      rcx, qword ptr [rbx + 0x118]
+  0001c977  baffffffff             mov      edx, 0xffffffff
+  0001c97c  ff15dea70200           call     qword ptr [rip + 0x2a7de]  ; -> WaitForSingleObject (KERNEL32.dll)
+  0001c982  85c0                   test     eax, eax
+  0001c984  75ea                   jne      0x18001c970
+  0001c986  0fb683e8000000         movzx    eax, byte ptr [rbx + 0xe8]
+  0001c98d  84c0                   test     al, al
+  0001c98f  0f85ab000000           jne      0x18001ca40
+  0001c995  488b03                 mov      rax, qword ptr [rbx]
+  0001c998  488bbb38010000         mov      rdi, qword ptr [rbx + 0x138]
+  0001c99f  488bb330010000         mov      rsi, qword ptr [rbx + 0x130]
+  0001c9a6  8bab28010000           mov      ebp, dword ptr [rbx + 0x128]
+  0001c9ac  4885c0                 test     rax, rax
+  0001c9af  7410                   je       0x18001c9c1
+  0001c9b1  488b4b10               mov      rcx, qword ptr [rbx + 0x10]
+  0001c9b5  4c8bc7                 mov      r8, rdi
+  0001c9b8  488bd6                 mov      rdx, rsi
+  0001c9bb  ffd0                   call     rax
+  0001c9bd  84c0                   test     al, al
+  0001c9bf  7460                   je       0x18001ca21
+  0001c9c1  488b4b18               mov      rcx, qword ptr [rbx + 0x18]
+  0001c9c5  4885c9                 test     rcx, rcx
+  0001c9c8  740d                   je       0x18001c9d7
+  0001c9ca  4c8bc7                 mov      r8, rdi
+  0001c9cd  488bd6                 mov      rdx, rsi
+  0001c9d0  e8bb880200             call     0x180045290  ; -> tier0+0x45290
+  0001c9d5  eb20                   jmp      0x18001c9f7  ; -> tier0+0x1c9f7
+  0001c9d7  ff153ba70200           call     qword ptr [rip + 0x2a73b]  ; -> GetCurrentProcess (KERNEL32.dll)
+  0001c9dd  4c8bcf                 mov      r9, rdi
+  0001c9e0  c644242801             mov      byte ptr [rsp + 0x28], 1
+  0001c9e5  4c8bc6                 mov      r8, rsi
+  0001c9e8  4889442420             mov      qword ptr [rsp + 0x20], rax
+  0001c9ed  8bd5                   mov      edx, ebp
+  0001c9ef  488bcb                 mov      rcx, rbx
+  0001c9f2  e8a9120000             call     0x18001dca0  ; -> tier0+0x1dca0
+  0001c9f7  4c8b5308               mov      r10, qword ptr [rbx + 8]
+  0001c9fb  4d85d2                 test     r10, r10
+  0001c9fe  7421                   je       0x18001ca21
+  0001ca00  4c8b4310               mov      r8, qword ptr [rbx + 0x10]
+  0001ca04  4c8bce                 mov      r9, rsi
+  0001ca07  488b9388000000         mov      rdx, qword ptr [rbx + 0x88]
+  0001ca0e  488b8b80000000         mov      rcx, qword ptr [rbx + 0x80]
+  0001ca15  88442428               mov      byte ptr [rsp + 0x28], al
+  0001ca19  48897c2420             mov      qword ptr [rsp + 0x20], rdi
+  0001ca1e  41ffd2                 call     r10
+  0001ca21  488b8b20010000         mov      rcx, qword ptr [rbx + 0x120]
+  0001ca28  4533c0                 xor      r8d, r8d
+  0001ca2b  888340010000           mov      byte ptr [rbx + 0x140], al
+  0001ca31  418d5001               lea      edx, [r8 + 1]
+  0001ca35  ff1575a80200           call     qword ptr [rip + 0x2a875]  ; -> ReleaseSemaphore (KERNEL32.dll)
+  0001ca3b  e930ffffff             jmp      0x18001c970  ; -> tier0+0x1c970
+  0001ca40  488b7c2450             mov      rdi, qword ptr [rsp + 0x50]
+  0001ca45  33c0                   xor      eax, eax
+  0001ca47  488b742448             mov      rsi, qword ptr [rsp + 0x48]
+  0001ca4c  488b6c2440             mov      rbp, qword ptr [rsp + 0x40]
+  0001ca51  4883c430               add      rsp, 0x30
+  0001ca55  5b                     pop      rbx
+  0001ca56  c3                     ret      
+
+#### tier0+0x7ef0..0x8037 (327 bytes) — Debug-dump function (already partially seen)
+  00007ef0  48895c2418             mov      qword ptr [rsp + 0x18], rbx    <<< ENTRY
+  00007ef5  56                     push     rsi
+  00007ef6  57                     push     rdi
+  00007ef7  4156                   push     r14
+  00007ef9  4881ec70030000         sub      rsp, 0x370
+  00007f00  488b05e18c0500         mov      rax, qword ptr [rip + 0x58ce1]  ; .data+0x60be8
+  00007f07  4833c4                 xor      rax, rsp
+  00007f0a  4889842460030000       mov      qword ptr [rsp + 0x360], rax
+  00007f12  488bf2                 mov      rsi, rdx
+  00007f15  488bf9                 mov      rdi, rcx
+  00007f18  410fb618               movzx    ebx, byte ptr [r8]
+  00007f1c  80bc24b803000000       cmp      byte ptr [rsp + 0x3b8], 0
+  00007f24  7507                   jne      0x180007f2d
+  00007f26  32c0                   xor      al, al
+  00007f28  e9e6000000             jmp      0x180008013  ; -> tier0+0x8013
+  00007f2d  33d2                   xor      edx, edx
+  00007f2f  41b808020000           mov      r8d, 0x208
+  00007f35  488d8c2450010000       lea      rcx, [rsp + 0x150]
+  00007f3d  e88e7d0100             call     0x18001fcd0  ; -> tier0+0x1fcd0
+  00007f42  4889742420             mov      qword ptr [rsp + 0x20], rsi
+  00007f47  4c8bcf                 mov      r9, rdi
+  00007f4a  4c8d052ffe0300         lea      r8, [rip + 0x3fe2f]  ; "%"
+  00007f51  ba03010000             mov      edx, 0x103
+  00007f56  488d8c2450010000       lea      rcx, [rsp + 0x150]
+  00007f5e  e81d080000             call     0x180008780  ; -> tier0+0x8780
+  00007f63  488d152afe0300         lea      rdx, [rip + 0x3fe2a]  ; "w"
+  00007f6a  488d8c2450010000       lea      rcx, [rsp + 0x150]
+  00007f72  e825160200             call     0x18002959c  ; -> tier0+0x2959c
+  00007f77  488bf8                 mov      rdi, rax
+  00007f7a  4889442438             mov      qword ptr [rsp + 0x38], rax
+  00007f7f  33d2                   xor      edx, edx
+  00007f81  41b804010000           mov      r8d, 0x104
+  00007f87  488d4c2440             lea      rcx, [rsp + 0x40]
+  00007f8c  e83f7d0100             call     0x18001fcd0  ; -> tier0+0x1fcd0
+  00007f91  41b804010000           mov      r8d, 0x104
+  00007f97  488d542440             lea      rdx, [rsp + 0x40]
+  00007f9c  33c9                   xor      ecx, ecx
+  00007f9e  ff151cf20300           call     qword ptr [rip + 0x3f21c]  ; -> GetModuleFileNameA (KERNEL32.dll)
+  00007fa4  85c0                   test     eax, eax
+  00007fa6  7414                   je       0x180007fbc
+  00007fa8  4c8d442440             lea      r8, [rsp + 0x40]
+  00007fad  488d15e4fd0300         lea      rdx, [rip + 0x3fde4]  ; "Executable: %s
+
+"
+  00007fb4  488bcf                 mov      rcx, rdi
+  00007fb7  e824f8ffff             call     0x1800077e0  ; -> tier0+0x77e0
+  00007fbc  84db                   test     bl, bl
+  00007fbe  7443                   je       0x180008003
+  00007fc0  33db                   xor      ebx, ebx
+  00007fc2  4c8d35279f0500         lea      r14, [rip + 0x59f27]  ; .data+0x61ef0
+  00007fc9  895c2430               mov      dword ptr [rsp + 0x30], ebx
+  00007fcd  83fb10                 cmp      ebx, 0x10
+  00007fd0  7331                   jae      0x180008003
+  00007fd2  4863c3                 movsxd   rax, ebx
+  00007fd5  498d34c6               lea      rsi, [r14 + rax*8]
+  00007fd9  48833e00               cmp      qword ptr [rsi], 0
+  00007fdd  7420                   je       0x180007fff
+  00007fdf  488bcf                 mov      rcx, rdi
+  00007fe2  e889780200             call     0x18002f870  ; -> tier0+0x2f870
+  00007fe7  90                     nop      
+  00007fe8  488bcf                 mov      rcx, rdi
+  00007feb  ff16                   call     qword ptr [rsi]
+  00007fed  eb10                   jmp      0x180007fff  ; -> tier0+0x7fff
+  00007fef  4c8d35fa9e0500         lea      r14, [rip + 0x59efa]  ; .data+0x61ef0
+  00007ff6  488b7c2438             mov      rdi, qword ptr [rsp + 0x38]
+  00007ffb  8b5c2430               mov      ebx, dword ptr [rsp + 0x30]
+  00007fff  ffc3                   inc      ebx
+  00008001  ebc6                   jmp      0x180007fc9  ; -> tier0+0x7fc9
+  00008003  488bcf                 mov      rcx, rdi
+  00008006  e819120200             call     0x180029224  ; -> tier0+0x29224
+  0000800b  0fb68424b8030000       movzx    eax, byte ptr [rsp + 0x3b8]
+  00008013  488b8c2460030000       mov      rcx, qword ptr [rsp + 0x360]
+  0000801b  4833cc                 xor      rcx, rsp
+  0000801e  e82d660100             call     0x18001e650  ; -> tier0+0x1e650
+  00008023  488b9c24a0030000       mov      rbx, qword ptr [rsp + 0x3a0]
+  0000802b  4881c470030000         add      rsp, 0x370
+  00008032  415e                   pop      r14
+  00008034  5f                     pop      rdi
+  00008035  5e                     pop      rsi
+  00008036  c3                     ret      
+
+#### tier0+0x2959c (Function that returns the FILE-like context in rdi) — NO PDATA ENTRY
+
+#### tier0+0x77e0..0x7824 (68 bytes) — Tier0's printf wrapper called for 'Executable: %s\n\n'
+  000077e0  4889542410             mov      qword ptr [rsp + 0x10], rdx    <<< ENTRY
+  000077e5  4c89442418             mov      qword ptr [rsp + 0x18], r8
+  000077ea  4c894c2420             mov      qword ptr [rsp + 0x20], r9
+  000077ef  53                     push     rbx
+  000077f0  56                     push     rsi
+  000077f1  57                     push     rdi
+  000077f2  4883ec30               sub      rsp, 0x30
+  000077f6  488bfa                 mov      rdi, rdx
+  000077f9  488d742460             lea      rsi, [rsp + 0x60]
+  000077fe  488bd9                 mov      rbx, rcx
+  00007801  e8eabcffff             call     0x1800034f0  ; -> tier0+0x34f0
+  00007806  4533c9                 xor      r9d, r9d
+  00007809  4889742420             mov      qword ptr [rsp + 0x20], rsi
+  0000780e  4c8bc7                 mov      r8, rdi
+  00007811  488bd3                 mov      rdx, rbx
+  00007814  488b08                 mov      rcx, qword ptr [rax]
+  00007817  e84c6e0200             call     0x18002e668  ; -> tier0+0x2e668
+  0000781c  4883c430               add      rsp, 0x30
+  00007820  5f                     pop      rdi
+  00007821  5e                     pop      rsi
+  00007822  5b                     pop      rbx
+  00007823  c3                     ret      
+
+#### tier0+0x2f870..0x2f8d7 (103 bytes) — Preamble called before each callback
+  0002f870  4883ec38               sub      rsp, 0x38    <<< ENTRY
+  0002f874  48894c2448             mov      qword ptr [rsp + 0x48], rcx
+  0002f879  4885c9                 test     rcx, rcx
+  0002f87c  7507                   jne      0x18002f885
+  0002f87e  e825feffff             call     0x18002f6a8  ; -> tier0+0x2f6a8
+  0002f883  eb4d                   jmp      0x18002f8d2  ; -> tier0+0x2f8d2
+  0002f885  8b5114                 mov      edx, dword ptr [rcx + 0x14]
+  0002f888  8bc2                   mov      eax, edx
+  0002f88a  2403                   and      al, 3
+  0002f88c  90                     nop      
+  0002f88d  3c02                   cmp      al, 2
+  0002f88f  7505                   jne      0x18002f896
+  0002f891  f6c2c0                 test     dl, 0xc0
+  0002f894  750a                   jne      0x18002f8a0
+  0002f896  0fbae20b               bt       edx, 0xb
+  0002f89a  7204                   jb       0x18002f8a0
+  0002f89c  33c0                   xor      eax, eax
+  0002f89e  eb32                   jmp      0x18002f8d2  ; -> tier0+0x2f8d2
+  0002f8a0  488d442448             lea      rax, [rsp + 0x48]
+  0002f8a5  4889442458             mov      qword ptr [rsp + 0x58], rax
+  0002f8aa  4c8d4c2450             lea      r9, [rsp + 0x50]
+  0002f8af  488b442448             mov      rax, qword ptr [rsp + 0x48]
+  0002f8b4  4c8d442458             lea      r8, [rsp + 0x58]
+  0002f8b9  488d542420             lea      rdx, [rsp + 0x20]
+  0002f8be  4889442450             mov      qword ptr [rsp + 0x50], rax
+  0002f8c3  488d4c2440             lea      rcx, [rsp + 0x40]
+  0002f8c8  4889442420             mov      qword ptr [rsp + 0x20], rax
+  0002f8cd  e896fdffff             call     0x18002f668  ; -> tier0+0x2f668
+  0002f8d2  4883c438               add      rsp, 0x38
+  0002f8d6  c3                     ret      
+
+#### tier0+0x29224..0x292bc (152 bytes) — Called at end of dump path
+  00029224  48895c2408             mov      qword ptr [rsp + 8], rbx    <<< ENTRY
+  00029229  48897c2410             mov      qword ptr [rsp + 0x10], rdi
+  0002922e  55                     push     rbp
+  0002922f  488bec                 mov      rbp, rsp
+  00029232  4883ec60               sub      rsp, 0x60
+  00029236  488365c000             and      qword ptr [rbp - 0x40], 0
+  0002923b  833daa78040000         cmp      dword ptr [rip + 0x478aa], 0  ; .data+0x70aec
+  00029242  c645d000               mov      byte ptr [rbp - 0x30], 0
+  00029246  c645e800               mov      byte ptr [rbp - 0x18], 0
+  0002924a  c645f000               mov      byte ptr [rbp - 0x10], 0
+  0002924e  c645f800               mov      byte ptr [rbp - 8], 0
+  00029252  7510                   jne      0x180029264
+  00029254  0f10055d7c0300         movups   xmm0, xmmword ptr [rip + 0x37c5d]
+  0002925b  c645e801               mov      byte ptr [rbp - 0x18], 1
+  0002925f  f30f7f45d8             movdqu   xmmword ptr [rbp - 0x28], xmm0
+  00029264  488d55c0               lea      rdx, [rbp - 0x40]
+  00029268  e893feffff             call     0x180029100  ; -> tier0+0x29100
+  0002926d  807de802               cmp      byte ptr [rbp - 0x18], 2
+  00029271  8bf8                   mov      edi, eax
+  00029273  750b                   jne      0x180029280
+  00029275  488b4dc0               mov      rcx, qword ptr [rbp - 0x40]
+  00029279  83a1a8030000fd         and      dword ptr [rcx + 0x3a8], 0xfffffffd
+  00029280  807df000               cmp      byte ptr [rbp - 0x10], 0
+  00029284  740f                   je       0x180029295
+  00029286  8b5dec                 mov      ebx, dword ptr [rbp - 0x14]
+  00029289  488d4dc0               lea      rcx, [rbp - 0x40]
+  0002928d  e82efbffff             call     0x180028dc0  ; -> tier0+0x28dc0
+  00029292  895820                 mov      dword ptr [rax + 0x20], ebx
+  00029295  807df800               cmp      byte ptr [rbp - 8], 0
+  00029299  740f                   je       0x1800292aa
+  0002929b  8b5df4                 mov      ebx, dword ptr [rbp - 0xc]
+  0002929e  488d4dc0               lea      rcx, [rbp - 0x40]
+  000292a2  e819fbffff             call     0x180028dc0  ; -> tier0+0x28dc0
+  000292a7  895824                 mov      dword ptr [rax + 0x24], ebx
+  000292aa  488b5c2470             mov      rbx, qword ptr [rsp + 0x70]
+  000292af  8bc7                   mov      eax, edi
+  000292b1  488b7c2478             mov      rdi, qword ptr [rsp + 0x78]
+  000292b6  4883c460               add      rsp, 0x60
+  000292ba  5d                     pop      rbp
+  000292bb  c3                     ret      
+
+#### tier0+0x8780..0x87db (91 bytes) — Buffer init / string operation
+  00008780  4c89442418             mov      qword ptr [rsp + 0x18], r8    <<< ENTRY
+  00008785  4c894c2420             mov      qword ptr [rsp + 0x20], r9
+  0000878a  53                     push     rbx
+  0000878b  55                     push     rbp
+  0000878c  56                     push     rsi
+  0000878d  57                     push     rdi
+  0000878e  4883ec38               sub      rsp, 0x38
+  00008792  498bf0                 mov      rsi, r8
+  00008795  488d6c2478             lea      rbp, [rsp + 0x78]
+  0000879a  488bda                 mov      rbx, rdx
+  0000879d  488bf9                 mov      rdi, rcx
+  000087a0  e84badffff             call     0x1800034f0  ; -> tier0+0x34f0
+  000087a5  48896c2428             mov      qword ptr [rsp + 0x28], rbp
+  000087aa  4c8bce                 mov      r9, rsi
+  000087ad  4c8bc3                 mov      r8, rbx
+  000087b0  48c744242000000000     mov      qword ptr [rsp + 0x20], 0
+  000087b9  488bd7                 mov      rdx, rdi
+  000087bc  488b08                 mov      rcx, qword ptr [rax]
+  000087bf  4883c901               or       rcx, 1
+  000087c3  e8dc630200             call     0x18002eba4  ; -> tier0+0x2eba4
+  000087c8  85c0                   test     eax, eax
+  000087ca  b9ffffffff             mov      ecx, 0xffffffff
+  000087cf  0f48c1                 cmovs    eax, ecx
+  000087d2  4883c438               add      rsp, 0x38
+  000087d6  5f                     pop      rdi
+  000087d7  5e                     pop      rsi
+  000087d8  5d                     pop      rbp
+  000087d9  5b                     pop      rbx
+  000087da  c3                     ret      
+
+
+=== Reading tier0.dll .data+0x61ef0 (16 callback slots) ===
+  slot[ 0] = 0x0000153700001500 (static-image value)
+  slot[ 1] = 0x0000154000055100 (static-image value)
+  slot[ 2] = 0x0005510000001577 (static-image value)
+  slot[ 3] = 0x0000165700001580 (static-image value)
+  slot[ 4] = 0x00001670000551d0 (static-image value)
+  slot[ 5] = 0x00055100000016a6 (static-image value)
+  slot[ 6] = 0x000016e6000016b0 (static-image value)
+  slot[ 7] = 0x000016f000055100 (static-image value)
+  slot[ 8] = 0x0005510000001710 (static-image value)
+  slot[ 9] = 0x0000173000001710 (static-image value)
+  slot[10] = 0x0000173000055100 (static-image value)
+  slot[11] = 0x000551980000175e (static-image value)
+  slot[12] = 0x0000179f00001760 (static-image value)
+  slot[13] = 0x000017b0000551d0 (static-image value)
+  slot[14] = 0x00055198000017da (static-image value)
+  slot[15] = 0x00001810000017f0 (static-image value)
+
+=== Strings near tier0+0x2959c (looking for fopen-related strings) ===

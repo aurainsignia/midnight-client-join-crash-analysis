@@ -1,0 +1,567 @@
+﻿
+========== tier0.dll (image_base 0x180000000) ==========
+
+#### +0x80c0..0x826e (430 bytes) — Installer A — has 2 LEAs to crash-report-writer (0x7ef0)
+  000080c0  mov      qword ptr [rsp + 0x18], rbx    <<< ENTRY
+  000080c5  mov      qword ptr [rsp + 0x20], rsi
+  000080ca  push     rdi
+  000080cb  sub      rsp, 0x1f0
+  000080d2  mov      rax, qword ptr [rip + 0x58b0f]  ; .data+0x60be8
+  000080d9  xor      rax, rsp
+  000080dc  mov      qword ptr [rsp + 0x1e0], rax
+  000080e4  xor      ebx, ebx
+  000080e6  mov      byte ptr [rsp + 0x50], 1
+  000080eb  cmp      byte ptr [rip + 0x59df7], bl  ; .data+0x61ee8
+  000080f1  mov      rsi, rdx
+  000080f4  mov      rdi, rcx
+  000080f7  mov      qword ptr [rsp + 0x70], 7
+  00008100  lea      rdx, [rip + 0x3fcb1]  ; "c"
+  00008107  mov      qword ptr [rsp + 0x58], rbx
+  0000810c  lea      r8d, [rbx + 7]
+  00008110  mov      qword ptr [rsp + 0x68], rbx
+  00008115  lea      rcx, [rsp + 0x58]
+  0000811a  je       0x1800081ac
+  00008120  call     0x180007dc0  ; -> +0x7dc0
+  00008125  mov      qword ptr [rsp + 0x40], rbx
+  0000812a  lea      rax, [rsp + 0x50]
+  0000812f  mov      qword ptr [rsp + 0x38], rbx
+  00008134  lea      r9, [rip - 0x24b]  ; +0x7ef0
+  0000813b  mov      dword ptr [rsp + 0x30], 0x126
+  00008143  lea      rdx, [rsp + 0x58]
+  00008148  mov      dword ptr [rsp + 0x28], 0xffffffff
+  00008150  lea      rcx, [rsp + 0x80]
+  00008158  xor      r8d, r8d
+  0000815b  mov      qword ptr [rsp + 0x20], rax
+  00008160  call     0x18001c530  ; -> +0x1c530
+  00008165  mov      rdx, qword ptr [rsp + 0x70]
+  0000816a  cmp      rdx, 8
+  0000816e  jb       0x18000821d
+  00008174  mov      rcx, qword ptr [rsp + 0x58]
+  00008179  lea      rdx, [rdx*2 + 2]
+  00008181  mov      rax, rcx
+  00008184  cmp      rdx, 0x1000
+  0000818b  jb       0x180008218
+  00008191  mov      rcx, qword ptr [rcx - 8]
+  00008195  add      rdx, 0x27
+  00008199  sub      rax, rcx
+  0000819c  add      rax, -8
+  000081a0  cmp      rax, 0x1f
+  000081a4  ja       0x180008268
+  000081aa  jmp      0x180008218  ; -> +0x8218
+  000081ac  call     0x180007dc0  ; -> +0x7dc0
+  000081b1  lea      rax, [rsp + 0x50]
+  000081b6  mov      dword ptr [rsp + 0x28], 0xffffffff
+  000081be  lea      r9, [rip - 0x2d5]  ; +0x7ef0
+  000081c5  mov      qword ptr [rsp + 0x20], rax
+  000081ca  xor      r8d, r8d
+  000081cd  lea      rdx, [rsp + 0x58]
+  000081d2  lea      rcx, [rsp + 0x80]
+  000081da  call     0x18001c340  ; -> +0x1c340
+  000081df  mov      rdx, qword ptr [rsp + 0x70]
+  000081e4  cmp      rdx, 8
+  000081e8  jb       0x18000821d
+  000081ea  mov      rcx, qword ptr [rsp + 0x58]
+  000081ef  lea      rdx, [rdx*2 + 2]
+  000081f7  mov      rax, rcx
+  000081fa  cmp      rdx, 0x1000
+  00008201  jb       0x180008218
+  00008203  mov      rcx, qword ptr [rcx - 8]
+  00008207  add      rdx, 0x27
+  0000820b  sub      rax, rcx
+  0000820e  add      rax, -8
+  00008212  cmp      rax, 0x1f
+  00008216  ja       0x180008262
+  00008218  call     0x18001e340  ; -> +0x1e340
+  0000821d  lea      r8, [rsp + 0x80]
+  00008225  mov      rdx, rsi
+  00008228  mov      rcx, rdi
+  0000822b  call     0x180007be0  ; -> +0x7be0
+  00008230  lea      rcx, [rsp + 0x80]
+  00008238  call     0x18001c6e0  ; -> +0x1c6e0
+  0000823d  mov      rcx, qword ptr [rsp + 0x1e0]
+  00008245  xor      rcx, rsp
+  00008248  call     0x18001e650  ; -> +0x1e650
+  0000824d  lea      r11, [rsp + 0x1f0]
+  00008255  mov      rbx, qword ptr [r11 + 0x20]
+  00008259  mov      rsi, qword ptr [r11 + 0x28]
+  0000825d  mov      rsp, r11
+  00008260  pop      rdi
+  00008261  ret      
+  00008262  call     0x18002f43c  ; -> +0x2f43c
+  00008267  int3     
+  00008268  call     0x18002f43c  ; -> +0x2f43c
+  0000826d  int3     
+
+#### +0x8270..0x8421 (433 bytes) — Installer B — has 2 LEAs to crash-report-writer
+  00008270  mov      qword ptr [rsp + 0x20], rbx    <<< ENTRY
+  00008275  push     rbp
+  00008276  push     rsi
+  00008277  push     rdi
+  00008278  sub      rsp, 0x1f0
+  0000827f  mov      rax, qword ptr [rip + 0x58962]  ; .data+0x60be8
+  00008286  xor      rax, rsp
+  00008289  mov      qword ptr [rsp + 0x1e0], rax
+  00008291  xor      ebx, ebx
+  00008293  mov      byte ptr [rsp + 0x50], 1
+  00008298  cmp      byte ptr [rip + 0x59c4a], bl  ; .data+0x61ee8
+  0000829e  mov      rbp, r8
+  000082a1  mov      esi, edx
+  000082a3  mov      qword ptr [rsp + 0x70], 7
+  000082ac  mov      rdi, rcx
+  000082af  mov      qword ptr [rsp + 0x58], rbx
+  000082b4  lea      r8d, [rbx + 7]
+  000082b8  mov      qword ptr [rsp + 0x68], rbx
+  000082bd  lea      rdx, [rip + 0x3faf4]  ; "c"
+  000082c4  lea      rcx, [rsp + 0x58]
+  000082c9  je       0x18000835b
+  000082cf  call     0x180007dc0  ; -> +0x7dc0
+  000082d4  mov      qword ptr [rsp + 0x40], rbx
+  000082d9  lea      rax, [rsp + 0x50]
+  000082de  mov      qword ptr [rsp + 0x38], rbx
+  000082e3  lea      r9, [rip - 0x3fa]  ; +0x7ef0
+  000082ea  mov      dword ptr [rsp + 0x30], 0x126
+  000082f2  lea      rdx, [rsp + 0x58]
+  000082f7  mov      dword ptr [rsp + 0x28], 0xffffffff
+  000082ff  lea      rcx, [rsp + 0x80]
+  00008307  xor      r8d, r8d
+  0000830a  mov      qword ptr [rsp + 0x20], rax
+  0000830f  call     0x18001c530  ; -> +0x1c530
+  00008314  mov      rdx, qword ptr [rsp + 0x70]
+  00008319  cmp      rdx, 8
+  0000831d  jb       0x1800083cc
+  00008323  mov      rcx, qword ptr [rsp + 0x58]
+  00008328  lea      rdx, [rdx*2 + 2]
+  00008330  mov      rax, rcx
+  00008333  cmp      rdx, 0x1000
+  0000833a  jb       0x1800083c7
+  00008340  mov      rcx, qword ptr [rcx - 8]
+  00008344  add      rdx, 0x27
+  00008348  sub      rax, rcx
+  0000834b  add      rax, -8
+  0000834f  cmp      rax, 0x1f
+  00008353  ja       0x18000841b
+  00008359  jmp      0x1800083c7  ; -> +0x83c7
+  0000835b  call     0x180007dc0  ; -> +0x7dc0
+  00008360  lea      rax, [rsp + 0x50]
+  00008365  mov      dword ptr [rsp + 0x28], 0xffffffff
+  0000836d  lea      r9, [rip - 0x484]  ; +0x7ef0
+  00008374  mov      qword ptr [rsp + 0x20], rax
+  00008379  xor      r8d, r8d
+  0000837c  lea      rdx, [rsp + 0x58]
+  00008381  lea      rcx, [rsp + 0x80]
+  00008389  call     0x18001c340  ; -> +0x1c340
+  0000838e  mov      rdx, qword ptr [rsp + 0x70]
+  00008393  cmp      rdx, 8
+  00008397  jb       0x1800083cc
+  00008399  mov      rcx, qword ptr [rsp + 0x58]
+  0000839e  lea      rdx, [rdx*2 + 2]
+  000083a6  mov      rax, rcx
+  000083a9  cmp      rdx, 0x1000
+  000083b0  jb       0x1800083c7
+  000083b2  mov      rcx, qword ptr [rcx - 8]
+  000083b6  add      rdx, 0x27
+  000083ba  sub      rax, rcx
+  000083bd  add      rax, -8
+  000083c1  cmp      rax, 0x1f
+  000083c5  ja       0x180008415
+  000083c7  call     0x18001e340  ; -> +0x1e340
+  000083cc  lea      r9, [rsp + 0x80]
+  000083d4  mov      r8, rbp
+  000083d7  mov      edx, esi
+  000083d9  mov      rcx, rdi
+  000083dc  call     0x180007c30  ; -> +0x7c30
+  000083e1  lea      rcx, [rsp + 0x80]
+  000083e9  mov      ebx, eax
+  000083eb  call     0x18001c6e0  ; -> +0x1c6e0
+  000083f0  mov      eax, ebx
+  000083f2  mov      rcx, qword ptr [rsp + 0x1e0]
+  000083fa  xor      rcx, rsp
+  000083fd  call     0x18001e650  ; -> +0x1e650
+  00008402  mov      rbx, qword ptr [rsp + 0x228]
+  0000840a  add      rsp, 0x1f0
+  00008411  pop      rdi
+  00008412  pop      rsi
+  00008413  pop      rbp
+  00008414  ret      
+  00008415  call     0x18002f43c  ; -> +0x2f43c
+  0000841a  int3     
+  0000841b  call     0x18002f43c  ; -> +0x2f43c
+  00008420  int3     
+
+#### +0x8430..0x85ec (444 bytes) — Installer C — has 2 LEAs
+  00008430  push     rbp    <<< ENTRY
+  00008432  push     rbx
+  00008433  push     rsi
+  00008434  push     rdi
+  00008435  push     r14
+  00008437  push     r15
+  00008439  lea      rbp, [rsp - 0xf8]
+  00008441  sub      rsp, 0x1f8
+  00008448  mov      rax, qword ptr [rip + 0x58799]  ; .data+0x60be8
+  0000844f  xor      rax, rsp
+  00008452  mov      qword ptr [rbp + 0xe0], rax
+  00008459  xor      ebx, ebx
+  0000845b  mov      byte ptr [rsp + 0x50], 1
+  00008460  cmp      byte ptr [rip + 0x59a82], bl  ; .data+0x61ee8
+  00008466  mov      r14, r8
+  00008469  mov      rsi, rdx
+  0000846c  mov      qword ptr [rsp + 0x70], 7
+  00008475  mov      rdi, rcx
+  00008478  mov      qword ptr [rsp + 0x58], rbx
+  0000847d  lea      r8d, [rbx + 7]
+  00008481  mov      qword ptr [rsp + 0x68], rbx
+  00008486  mov      r15, r9
+  00008489  lea      rdx, [rip + 0x3f928]  ; "c"
+  00008490  lea      rcx, [rsp + 0x58]
+  00008495  je       0x180008523
+  0000849b  call     0x180007dc0  ; -> +0x7dc0
+  000084a0  mov      qword ptr [rsp + 0x40], rbx
+  000084a5  lea      rax, [rsp + 0x50]
+  000084aa  mov      qword ptr [rsp + 0x38], rbx
+  000084af  lea      r9, [rip - 0x5c6]  ; +0x7ef0
+  000084b6  mov      dword ptr [rsp + 0x30], 0x126
+  000084be  lea      rdx, [rsp + 0x58]
+  000084c3  mov      dword ptr [rsp + 0x28], 0xffffffff
+  000084cb  lea      rcx, [rbp - 0x80]
+  000084cf  xor      r8d, r8d
+  000084d2  mov      qword ptr [rsp + 0x20], rax
+  000084d7  call     0x18001c530  ; -> +0x1c530
+  000084dc  mov      rdx, qword ptr [rsp + 0x70]
+  000084e1  cmp      rdx, 8
+  000084e5  jb       0x180008590
+  000084eb  mov      rcx, qword ptr [rsp + 0x58]
+  000084f0  lea      rdx, [rdx*2 + 2]
+  000084f8  mov      rax, rcx
+  000084fb  cmp      rdx, 0x1000
+  00008502  jb       0x18000858b
+  00008508  mov      rcx, qword ptr [rcx - 8]
+  0000850c  add      rdx, 0x27
+  00008510  sub      rax, rcx
+  00008513  add      rax, -8
+  00008517  cmp      rax, 0x1f
+  0000851b  ja       0x1800085e6
+  00008521  jmp      0x18000858b  ; -> +0x858b
+  00008523  call     0x180007dc0  ; -> +0x7dc0
+  00008528  lea      rax, [rsp + 0x50]
+  0000852d  mov      dword ptr [rsp + 0x28], 0xffffffff
+  00008535  lea      r9, [rip - 0x64c]  ; +0x7ef0
+  0000853c  mov      qword ptr [rsp + 0x20], rax
+  00008541  xor      r8d, r8d
+  00008544  lea      rdx, [rsp + 0x58]
+  00008549  lea      rcx, [rbp - 0x80]
+  0000854d  call     0x18001c340  ; -> +0x1c340
+  00008552  mov      rdx, qword ptr [rsp + 0x70]
+  00008557  cmp      rdx, 8
+  0000855b  jb       0x180008590
+  0000855d  mov      rcx, qword ptr [rsp + 0x58]
+  00008562  lea      rdx, [rdx*2 + 2]
+  0000856a  mov      rax, rcx
+  0000856d  cmp      rdx, 0x1000
+  00008574  jb       0x18000858b
+  00008576  mov      rcx, qword ptr [rcx - 8]
+  0000857a  add      rdx, 0x27
+  0000857e  sub      rax, rcx
+  00008581  add      rax, -8
+  00008585  cmp      rax, 0x1f
+  00008589  ja       0x1800085e0
+  0000858b  call     0x18001e340  ; -> +0x1e340
+  00008590  lea      rax, [rbp - 0x80]
+  00008594  mov      r9, r15
+  00008597  mov      qword ptr [rsp + 0x28], rax
+  0000859c  mov      r8, r14
+  0000859f  mov      eax, dword ptr [rbp + 0x150]
+  000085a5  mov      rdx, rsi
+  000085a8  mov      rcx, rdi
+  000085ab  mov      dword ptr [rsp + 0x20], eax
+  000085af  call     0x180007c90  ; -> +0x7c90
+  000085b4  lea      rcx, [rbp - 0x80]
+  000085b8  mov      ebx, eax
+  000085ba  call     0x18001c6e0  ; -> +0x1c6e0
+  000085bf  mov      eax, ebx
+  000085c1  mov      rcx, qword ptr [rbp + 0xe0]
+  000085c8  xor      rcx, rsp
+  000085cb  call     0x18001e650  ; -> +0x1e650
+  000085d0  add      rsp, 0x1f8
+  000085d7  pop      r15
+  000085d9  pop      r14
+  000085db  pop      rdi
+  000085dc  pop      rsi
+  000085dd  pop      rbx
+  000085de  pop      rbp
+  000085df  ret      
+  000085e0  call     0x18002f43c  ; -> +0x2f43c
+  000085e5  int3     
+  000085e6  call     0x18002f43c  ; -> +0x2f43c
+  000085eb  int3     
+
+#### +0x85f0..0x86cf (223 bytes) — Installer D — 1 LEA via rdx
+  000085f0  mov      qword ptr [rsp + 0x10], rbx    <<< ENTRY
+  000085f5  push     rdi
+  000085f6  sub      rsp, 0x50
+  000085fa  mov      rax, qword ptr [rip + 0x585e7]  ; .data+0x60be8
+  00008601  xor      rax, rsp
+  00008604  mov      qword ptr [rsp + 0x48], rax
+  00008609  movzx    eax, byte ptr [rip + 0x598d8]  ; .data+0x61ee8
+  00008610  movzx    edi, dl
+  00008613  neg      al
+  00008615  mov      byte ptr [rsp + 0x20], cl
+  00008619  lea      rdx, [rip + 0x3f798]  ; "c"
+  00008620  mov      qword ptr [rsp + 0x40], 7
+  00008629  sbb      ebx, ebx
+  0000862b  lea      rcx, [rsp + 0x28]
+  00008630  xor      eax, eax
+  00008632  and      ebx, 0x126
+  00008638  mov      qword ptr [rsp + 0x28], rax
+  0000863d  mov      qword ptr [rsp + 0x38], rax
+  00008642  lea      r8d, [rax + 7]
+  00008646  call     0x180007dc0  ; -> +0x7dc0
+  0000864b  mov      r9d, ebx
+  0000864e  lea      r8, [rsp + 0x20]
+  00008653  lea      rdx, [rip - 0x76a]  ; +0x7ef0
+  0000865a  lea      rcx, [rsp + 0x28]
+  0000865f  call     0x18001d8a0  ; -> +0x1d8a0
+  00008664  mov      rdx, qword ptr [rsp + 0x40]
+  00008669  cmp      rdx, 8
+  0000866d  jb       0x1800086a2
+  0000866f  mov      rcx, qword ptr [rsp + 0x28]
+  00008674  lea      rdx, [rdx*2 + 2]
+  0000867c  mov      rax, rcx
+  0000867f  cmp      rdx, 0x1000
+  00008686  jb       0x18000869d
+  00008688  mov      rcx, qword ptr [rcx - 8]
+  0000868c  add      rdx, 0x27
+  00008690  sub      rax, rcx
+  00008693  add      rax, -8
+  00008697  cmp      rax, 0x1f
+  0000869b  ja       0x1800086c9
+  0000869d  call     0x18001e340  ; -> +0x1e340
+  000086a2  test     dil, dil
+  000086a5  je       0x1800086b1
+  000086a7  mov      ecx, 0xffffffff
+  000086ac  call     0x18000c940  ; -> +0xc940
+  000086b1  mov      rcx, qword ptr [rsp + 0x48]
+  000086b6  xor      rcx, rsp
+  000086b9  call     0x18001e650  ; -> +0x1e650
+  000086be  mov      rbx, qword ptr [rsp + 0x68]
+  000086c3  add      rsp, 0x50
+  000086c7  pop      rdi
+  000086c8  ret      
+  000086c9  call     0x18002f43c  ; -> +0x2f43c
+  000086ce  int3     
+
+#### +0x1d408..0x1d69e (662 bytes) — Worker thread creator (has 1 LEA to 0x1c950)
+  0001d408  cmp      qword ptr [rdi + 0x18], r13    <<< ENTRY
+  0001d40c  jne      0x18001d528
+  0001d412  lea      rcx, [rdi + 0xf0]
+  0001d419  call     qword ptr [rip + 0x29e51]  ; -> InitializeCriticalSection (KERNEL32.dll)
+  0001d41f  xor      r9d, r9d
+  0001d422  xor      edx, edx
+  0001d424  xor      ecx, ecx
+  0001d426  lea      r8d, [r9 + 1]
+  0001d42a  call     qword ptr [rip + 0x29f30]  ; -> CreateSemaphoreW (KERNEL32.dll)
+  0001d430  xor      r9d, r9d
+  0001d433  xor      edx, edx
+  0001d435  xor      ecx, ecx
+  0001d437  mov      qword ptr [rdi + 0x118], rax
+  0001d43e  lea      r8d, [r9 + 1]
+  0001d442  call     qword ptr [rip + 0x29f18]  ; -> CreateSemaphoreW (KERNEL32.dll)
+  0001d448  mov      qword ptr [rdi + 0x120], rax
+  0001d44f  test     rax, rax
+  0001d452  je       0x18001d48d
+  0001d454  cmp      qword ptr [rdi + 0x118], r13
+  0001d45b  je       0x18001d48d
+  0001d45d  lea      rax, [rsp + 0x80]
+  0001d465  mov      r9, rdi
+  0001d468  mov      qword ptr [rsp + 0x28], rax
+  0001d46d  lea      r8, [rip - 0xb24]  ; +0x1c950
+  0001d474  mov      edx, 0x10000
+  0001d479  mov      dword ptr [rsp + 0x20], r13d
+  0001d47e  xor      ecx, ecx
+  0001d480  call     qword ptr [rip + 0x29cea]  ; -> CreateThread (KERNEL32.dll)
+  0001d486  mov      qword ptr [rdi + 0xe0], rax
+  0001d48d  lea      rcx, [rip + 0x2d1bc]  ; "d"
+  0001d494  call     qword ptr [rip + 0x29ece]  ; -> LoadLibraryW (KERNEL32.dll)
+  0001d49a  mov      qword ptr [rdi + 0x98], rax
+  0001d4a1  test     rax, rax
+  0001d4a4  je       0x18001d4bd
+  0001d4a6  lea      rdx, [rip + 0x2b98b]  ; "MiniDumpWriteDump"
+  0001d4ad  mov      rcx, rax
+  0001d4b0  call     qword ptr [rip + 0x29c7a]  ; -> GetProcAddress (KERNEL32.dll)
+  0001d4b6  mov      qword ptr [rdi + 0xa0], rax
+  0001d4bd  lea      rcx, [rip + 0x2d1a4]  ; "r"
+  0001d4c4  call     qword ptr [rip + 0x29e9e]  ; -> LoadLibraryW (KERNEL32.dll)
+  0001d4ca  mov      qword ptr [rdi + 0xb0], rax
+  0001d4d1  test     rax, rax
+  0001d4d4  je       0x18001d4ed
+  0001d4d6  lea      rdx, [rip + 0x2d1a3]  ; "UuidCreate"
+  0001d4dd  mov      rcx, rax
+  0001d4e0  call     qword ptr [rip + 0x29c4a]  ; -> GetProcAddress (KERNEL32.dll)
+  0001d4e6  mov      qword ptr [rdi + 0xb8], rax
+  0001d4ed  lea      rsi, [rdi + 0x20]
+  0001d4f1  cmp      rsi, r14
+  0001d4f4  je       0x18001d50f
+  0001d4f6  cmp      qword ptr [r14 + 0x18], 8
+  0001d4fb  mov      rdx, r14
+  0001d4fe  jb       0x18001d503
+  0001d500  mov      rdx, qword ptr [r14]
+  0001d503  mov      r8, qword ptr [r14 + 0x10]
+  0001d507  mov      rcx, rsi
+  0001d50a  call     0x180007dc0  ; -> +0x7dc0
+  0001d50f  cmp      qword ptr [rsi + 0x18], 8
+  0001d514  jb       0x18001d519
+  0001d516  mov      rsi, qword ptr [rsi]
+  0001d519  mov      rcx, rdi
+  0001d51c  mov      qword ptr [rdi + 0x80], rsi
+  0001d523  call     0x18001d720  ; -> +0x1d720
+  0001d528  mov      rsi, qword ptr [rdi + 0x148]
+  0001d52f  mov      ecx, 0x20
+  0001d534  mov      qword ptr [rsp + 0x30], r13
+  0001d539  mov      dword ptr [rsp + 0x38], r13d
+  0001d53e  mov      r14, qword ptr [rsi + 8]
+  0001d542  call     0x18001e304  ; -> +0x1e304
+  0001d547  movups   xmm0, xmmword ptr [rsp + 0x30]
+  0001d54c  mov      rdx, rax
+  0001d54f  movabs   rcx, 0x7fffffffffffffe
+  0001d559  mov      qword ptr [rax], rsi
+  0001d55c  mov      qword ptr [rax + 8], r14
+  0001d560  movups   xmmword ptr [rax + 0x10], xmm0
+  0001d564  mov      rax, qword ptr [rdi + 0x150]
+  0001d56b  sub      rcx, rax
+  0001d56e  cmp      rcx, 1
+  0001d572  jb       0x18001d691
+  0001d578  inc      rax
+  0001d57b  mov      qword ptr [rdi + 0x150], rax
+  0001d582  mov      qword ptr [rsi + 8], rdx
+  0001d586  mov      qword ptr [r14], rdx
+  0001d589  cmp      r12d, 1
+  0001d58d  jne      0x18001d59c
+  0001d58f  lea      rcx, [rip + 0x52792]  ; .data+0x6fd28
+  0001d596  call     qword ptr [rip + 0x29cd4]  ; -> InitializeCriticalSection (KERNEL32.dll)
+  0001d59c  test     r15d, r15d
+  0001d59f  je       0x18001d667
+  0001d5a5  lea      rcx, [rip + 0x5277c]  ; .data+0x6fd28
+  0001d5ac  call     qword ptr [rip + 0x29b2e]  ; -> EnterCriticalSection (KERNEL32.dll)
+  0001d5b2  mov      rax, qword ptr [rip + 0x5275f]  ; .data+0x6fd18
+  0001d5b9  test     rax, rax
+  0001d5bc  jne      0x18001d5e2
+  0001d5be  lea      ecx, [rax + 0x18]
+  0001d5c1  call     0x18001e304  ; -> +0x1e304
+  0001d5c6  test     rax, rax
+  0001d5c9  je       0x18001d5d8
+  0001d5cb  mov      qword ptr [rax], r13
+  0001d5ce  mov      qword ptr [rax + 8], r13
+  0001d5d2  mov      qword ptr [rax + 0x10], r13
+  0001d5d6  jmp      0x18001d5db  ; -> +0x1d5db
+  0001d5d8  mov      rax, r13
+  0001d5db  mov      qword ptr [rip + 0x52736], rax  ; .data+0x6fd18
+  0001d5e2  mov      rdx, qword ptr [rax + 8]
+  0001d5e6  mov      qword ptr [rsp + 0x90], rdi
+  0001d5ee  cmp      qword ptr [rax + 0x10], rdx
+  0001d5f2  je       0x18001d5fe
+  0001d5f4  mov      qword ptr [rdx], rdi
+  0001d5f7  add      qword ptr [rax + 8], 8
+  0001d5fc  jmp      0x18001d60e  ; -> +0x1d60e
+  0001d5fe  lea      r8, [rsp + 0x90]
+  0001d606  mov      rcx, rax
+  0001d609  call     0x18001c1a0  ; -> +0x1c1a0
+  0001d60e  test     r15b, 1
+  0001d612  je       0x18001d628
+  0001d614  lea      rcx, [rip - 0xbbb]  ; +0x1ca60
+  0001d61b  call     qword ptr [rip + 0x29c0f]  ; -> SetUnhandledExceptionFilter (KERNEL32.dll)
+  0001d621  mov      qword ptr [rdi + 0xc8], rax
+  0001d628  test     r15b, 2
+  0001d62c  je       0x18001d641
+  0001d62e  lea      rcx, [rip - 0xa65]  ; +0x1cbd0
+  0001d635  call     0x18002f4b4  ; -> +0x2f4b4
+  0001d63a  mov      qword ptr [rdi + 0xd0], rax
+  0001d641  test     r15b, 4
+  0001d645  je       0x18001d65a
+  0001d647  lea      rcx, [rip - 0x6fe]  ; +0x1cf50
+  0001d64e  call     0x18001f5d8  ; -> +0x1f5d8
+  0001d653  mov      qword ptr [rdi + 0xd8], rax
+  0001d65a  lea      rcx, [rip + 0x526c7]  ; .data+0x6fd28
+  0001d661  call     qword ptr [rip + 0x29a81]  ; -> LeaveCriticalSection (KERNEL32.dll)
+  0001d667  test     rbx, rbx
+  0001d66a  je       0x18001d681
+  0001d66c  mov      rcx, rbx
+  0001d66f  call     0x180044fb0  ; -> +0x44fb0
+  0001d674  mov      edx, 0x370
+  0001d679  mov      rcx, rbx
+  0001d67c  call     0x18001e340  ; -> +0x1e340
+  0001d681  add      rsp, 0x40
+  0001d685  pop      r15
+  0001d687  pop      r14
+  0001d689  pop      r13
+  0001d68b  pop      r12
+  0001d68d  pop      rdi
+  0001d68e  pop      rsi
+  0001d68f  pop      rbx
+  0001d690  ret      
+  0001d691  lea      rcx, [rip + 0x2d088]  ; "list<T> too long"
+  0001d698  call     0x18001e1bc  ; -> +0x1e1bc
+  0001d69d  int3     
+
+========== lua_shared.dll (image_base 0x180000000) ==========
+
+#### +0x14c50..0x14d38 (232 bytes) — Lua state dumper callback (slot[0] in tier0 table)
+  00014c50  mov      qword ptr [rsp + 8], rbx    <<< ENTRY
+  00014c55  mov      qword ptr [rsp + 0x10], rbp
+  00014c5a  mov      qword ptr [rsp + 0x18], rsi
+  00014c5f  push     rdi
+  00014c60  sub      rsp, 0x20
+  00014c64  mov      rbp, rcx
+  00014c67  xor      edx, edx
+  00014c69  lea      rcx, [rip + 0xaaa50]  ; .data+0xbf6c0
+  00014c70  mov      r8d, 0x1000
+  00014c76  call     0x180060890  ; -> +0x60890
+  00014c7b  xor      ebx, ebx
+  00014c7d  lea      rsi, [rip + 0xa5ff4]  ; .data+0xbac78
+  00014c84  mov      rdi, qword ptr [rsi]
+  00014c87  mov      ecx, ebx
+  00014c89  test     ebx, ebx
+  00014c8b  je       0x180014ca9
+  00014c8d  sub      ecx, 1
+  00014c90  je       0x180014ca0
+  00014c92  cmp      ecx, 1
+  00014c95  jne      0x180014cc8
+  00014c97  lea      rdx, [rip + 0x829da]  ; "  MenuSystem
+"
+  00014c9e  jmp      0x180014cb0  ; -> +0x14cb0
+  00014ca0  lea      rdx, [rip + 0x829c1]  ; "  Server
+"
+  00014ca7  jmp      0x180014cb0  ; -> +0x14cb0
+  00014ca9  lea      rdx, [rip + 0x829a8]  ; "  Client
+"
+  00014cb0  mov      r9d, 0xffffffff
+  00014cb6  lea      rcx, [rip + 0xaaa03]  ; .data+0xbf6c0
+  00014cbd  mov      r8d, 0x1000
+  00014cc3  call     0x1800606b0  ; -> +0x606b0
+  00014cc8  mov      r8d, 0x1000
+  00014cce  test     rdi, rdi
+  00014cd1  jne      0x180014cec
+  00014cd3  lea      r9d, [rdi - 1]
+  00014cd7  lea      rdx, [rip + 0x829aa]  ; "    Lua Interface = NULL
+
+"
+  00014cde  lea      rcx, [rip + 0xaa9db]  ; .data+0xbf6c0
+  00014ce5  call     0x1800606b0  ; -> +0x606b0
+  00014cea  jmp      0x180014cff  ; -> +0x14cff
+  00014cec  mov      rax, qword ptr [rdi]
+  00014cef  lea      rdx, [rip + 0xaa9ca]  ; .data+0xbf6c0
+  00014cf6  mov      rcx, rdi
+  00014cf9  call     qword ptr [rax + 0x3e8]
+  00014cff  inc      ebx
+  00014d01  add      rsi, 8
+  00014d05  cmp      ebx, 3
+  00014d08  jl       0x180014c84
+  00014d0e  lea      r8, [rip + 0xaa9ab]  ; .data+0xbf6c0
+  00014d15  mov      rcx, rbp
+  00014d18  lea      rdx, [rip + 0x82989]  ; "-Lua Stack Traces-
+==================
+%s"
+  00014d1f  mov      rbx, qword ptr [rsp + 0x30]
+  00014d24  mov      rbp, qword ptr [rsp + 0x38]
+  00014d29  mov      rsi, qword ptr [rsp + 0x40]
+  00014d2e  add      rsp, 0x20
+  00014d32  pop      rdi
+  00014d33  jmp      0x180014fa0  ; -> +0x14fa0

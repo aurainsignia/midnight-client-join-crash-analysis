@@ -1,0 +1,83 @@
+﻿tier0.dll image base: 0x180000000
+Function containing tier0+0x7fed: 0x7ef0..0x8037  (327 bytes)
+
+  00007ef0  48895c2418             mov      qword ptr [rsp + 0x18], rbx    <<< ENTRY
+  00007ef5  56                     push     rsi
+  00007ef6  57                     push     rdi
+  00007ef7  4156                   push     r14
+  00007ef9  4881ec70030000         sub      rsp, 0x370
+  00007f00  488b05e18c0500         mov      rax, qword ptr [rip + 0x58ce1]  ; .data+0x60be8
+  00007f07  4833c4                 xor      rax, rsp
+  00007f0a  4889842460030000       mov      qword ptr [rsp + 0x360], rax
+  00007f12  488bf2                 mov      rsi, rdx
+  00007f15  488bf9                 mov      rdi, rcx
+  00007f18  410fb618               movzx    ebx, byte ptr [r8]
+  00007f1c  80bc24b803000000       cmp      byte ptr [rsp + 0x3b8], 0
+  00007f24  7507                   jne      0x180007f2d
+  00007f26  32c0                   xor      al, al
+  00007f28  e9e6000000             jmp      0x180008013  ; -> tier0+0x8013
+  00007f2d  33d2                   xor      edx, edx
+  00007f2f  41b808020000           mov      r8d, 0x208
+  00007f35  488d8c2450010000       lea      rcx, [rsp + 0x150]
+  00007f3d  e88e7d0100             call     0x18001fcd0  ; -> tier0+0x1fcd0
+  00007f42  4889742420             mov      qword ptr [rsp + 0x20], rsi
+  00007f47  4c8bcf                 mov      r9, rdi
+  00007f4a  4c8d052ffe0300         lea      r8, [rip + 0x3fe2f]  ; .rdata+0x47d80
+  00007f51  ba03010000             mov      edx, 0x103
+  00007f56  488d8c2450010000       lea      rcx, [rsp + 0x150]
+  00007f5e  e81d080000             call     0x180008780  ; -> tier0+0x8780
+  00007f63  488d152afe0300         lea      rdx, [rip + 0x3fe2a]  ; .rdata+0x47d94
+  00007f6a  488d8c2450010000       lea      rcx, [rsp + 0x150]
+  00007f72  e825160200             call     0x18002959c  ; -> tier0+0x2959c
+  00007f77  488bf8                 mov      rdi, rax
+  00007f7a  4889442438             mov      qword ptr [rsp + 0x38], rax
+  00007f7f  33d2                   xor      edx, edx
+  00007f81  41b804010000           mov      r8d, 0x104
+  00007f87  488d4c2440             lea      rcx, [rsp + 0x40]
+  00007f8c  e83f7d0100             call     0x18001fcd0  ; -> tier0+0x1fcd0
+  00007f91  41b804010000           mov      r8d, 0x104
+  00007f97  488d542440             lea      rdx, [rsp + 0x40]
+  00007f9c  33c9                   xor      ecx, ecx
+  00007f9e  ff151cf20300           call     qword ptr [rip + 0x3f21c]  ; -> GetModuleFileNameA (KERNEL32.dll)
+  00007fa4  85c0                   test     eax, eax
+  00007fa6  7414                   je       0x180007fbc
+  00007fa8  4c8d442440             lea      r8, [rsp + 0x40]
+  00007fad  488d15e4fd0300         lea      rdx, [rip + 0x3fde4]  ; "Executable: %s
+
+"
+  00007fb4  488bcf                 mov      rcx, rdi
+  00007fb7  e824f8ffff             call     0x1800077e0  ; -> tier0+0x77e0
+  00007fbc  84db                   test     bl, bl
+  00007fbe  7443                   je       0x180008003
+  00007fc0  33db                   xor      ebx, ebx
+  00007fc2  4c8d35279f0500         lea      r14, [rip + 0x59f27]  ; .data+0x61ef0
+  00007fc9  895c2430               mov      dword ptr [rsp + 0x30], ebx
+  00007fcd  83fb10                 cmp      ebx, 0x10
+  00007fd0  7331                   jae      0x180008003
+  00007fd2  4863c3                 movsxd   rax, ebx
+  00007fd5  498d34c6               lea      rsi, [r14 + rax*8]
+  00007fd9  48833e00               cmp      qword ptr [rsi], 0
+  00007fdd  7420                   je       0x180007fff
+  00007fdf  488bcf                 mov      rcx, rdi
+  00007fe2  e889780200             call     0x18002f870  ; -> tier0+0x2f870
+  00007fe7  90                     nop      
+  00007fe8  488bcf                 mov      rcx, rdi
+  00007feb  ff16                   call     qword ptr [rsi]
+  00007fed  eb10                   jmp      0x180007fff  ; -> tier0+0x7fff    <<< STACK RA
+  00007fef  4c8d35fa9e0500         lea      r14, [rip + 0x59efa]  ; .data+0x61ef0
+  00007ff6  488b7c2438             mov      rdi, qword ptr [rsp + 0x38]
+  00007ffb  8b5c2430               mov      ebx, dword ptr [rsp + 0x30]
+  00007fff  ffc3                   inc      ebx
+  00008001  ebc6                   jmp      0x180007fc9  ; -> tier0+0x7fc9
+  00008003  488bcf                 mov      rcx, rdi
+  00008006  e819120200             call     0x180029224  ; -> tier0+0x29224
+  0000800b  0fb68424b8030000       movzx    eax, byte ptr [rsp + 0x3b8]
+  00008013  488b8c2460030000       mov      rcx, qword ptr [rsp + 0x360]
+  0000801b  4833cc                 xor      rcx, rsp
+  0000801e  e82d660100             call     0x18001e650  ; -> tier0+0x1e650
+  00008023  488b9c24a0030000       mov      rbx, qword ptr [rsp + 0x3a0]
+  0000802b  4881c470030000         add      rsp, 0x370
+  00008032  415e                   pop      r14
+  00008034  5f                     pop      rdi
+  00008035  5e                     pop      rsi
+  00008036  c3                     ret      

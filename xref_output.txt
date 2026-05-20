@@ -1,0 +1,9 @@
+﻿Scanning .text 00001000..0037fa00 (capstone)...
+
+#### CALLERS of engine.dll+0x352ab4 (_vfprintf_outer):  (0 sites)
+
+#### CALLERS of engine.dll+0x34df10 (vfprintf_lockwrapper):  (0 sites)
+
+#### CALLERS of engine.dll+0x34fe48 (_vfprintf_internal):  (0 sites)
+
+#### CALLERS of engine.dll+0x350f68 (_output_specifier):  (0 sites)

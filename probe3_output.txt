@@ -1,0 +1,91 @@
+﻿Function containing 0x21b110: (2208016, 2208417)
+
+=== Function 0x21b110..0x21b2a1 (401 bytes) ===
+  0021b110  48895c2408             mov      qword ptr [rsp + 8], rbx
+  0021b115  4889742410             mov      qword ptr [rsp + 0x10], rsi
+  0021b11a  57                     push     rdi
+  0021b11b  4883ec20               sub      rsp, 0x20
+  0021b11f  418bf9                 mov      edi, r9d
+  0021b122  498bd8                 mov      rbx, r8
+  0021b125  488bf2                 mov      rsi, rdx
+  0021b128  e8134afbff             call     0x1801cfb40  ; -> engine+0x1cfb40
+  0021b12d  e83e20e0ff             call     0x18001d170  ; -> engine+0x1d170
+  0021b132  33d2                   xor      edx, edx
+  0021b134  488d0de5ed1900         lea      rcx, [rip + 0x19ede5]  ; "Console"
+  0021b13b  ff15275a1600           call     qword ptr [rip + 0x165a27]  ; -> [engine+0x380b68]
+  0021b141  b201                   mov      dl, 1
+  0021b143  33c9                   xor      ecx, ecx
+  0021b145  ff150d5a1600           call     qword ptr [rip + 0x165a0d]  ; -> [engine+0x380b58]
+  0021b14b  488d0d36572c00         lea      rcx, [rip + 0x2c5736]  ; .data+0x4e0888
+  0021b152  ff15f8591600           call     qword ptr [rip + 0x1659f8]  ; -> [engine+0x380b50]
+  0021b158  b201                   mov      dl, 1
+  0021b15a  488d0d2ff7ffff         lea      rcx, [rip - 0x8d1]  ; engine+0x21a890
+  0021b161  ff15115a1600           call     qword ptr [rip + 0x165a11]  ; -> [engine+0x380b78]
+  0021b167  41b001                 mov      r8b, 1
+  0021b16a  488d157ff0ffff         lea      rdx, [rip - 0xf81]  ; engine+0x21a1f0
+  0021b171  488d0d88386800         lea      rcx, [rip + 0x683888]  ; .data+0x89ea00
+  0021b178  e8e36a0800             call     0x1802a1c60  ; -> engine+0x2a1c60
+  0021b17d  85ff                   test     edi, edi
+  0021b17f  c605aa3d680000         mov      byte ptr [rip + 0x683daa], 0  ; .data+0x89ef30
+  0021b186  41b82c020000           mov      r8d, 0x22c
+  0021b18c  48891dad7ab700         mov      qword ptr [rip + 0xb77aad], rbx  ; .data+0xd92c40
+  0021b193  0f95059e79b700         setne    byte ptr [rip + 0xb7799e]
+  0021b19a  488d0ddf73b700         lea      rcx, [rip + 0xb773df]  ; .data+0xd92580
+  0021b1a1  33d2                   xor      edx, edx
+  0021b1a3  e838b31100             call     0x1803364e0  ; -> engine+0x3364e0
+  0021b1a8  488d1d9179b700         lea      rbx, [rip + 0xb77991]  ; .data+0xd92b40
+  0021b1af  41b800010000           mov      r8d, 0x100
+  0021b1b5  488bcb                 mov      rcx, rbx
+  0021b1b8  488bd6                 mov      rdx, rsi
+  0021b1bb  e810470800             call     0x18029f8d0  ; -> engine+0x29f8d0
+  0021b1c0  488bcb                 mov      rcx, rbx
+  0021b1c3  e8584c0800             call     0x18029fe20  ; -> engine+0x29fe20
+  0021b1c8  b25c                   mov      dl, 0x5c
+  0021b1ca  488bcb                 mov      rcx, rbx
+  0021b1cd  e86e2e0800             call     0x18029e040  ; -> engine+0x29e040
+  0021b1d2  4533c0                 xor      r8d, r8d
+  0021b1d5  48891d9c276800         mov      qword ptr [rip + 0x68279c], rbx  ; .data+0x89d978
+  0021b1dc  488d15ddb81b00         lea      rdx, [rip + 0x1bb8dd]  ; "Sys_Shutdown()"
+  0021b1e3  488d0de6b81b00         lea      rcx, [rip + 0x1bb8e6]  ; "Sys_Init()"
+  0021b1ea  e8a1920000             call     0x180224490  ; -> engine+0x224490
+  0021b1ef  ff15bb581600           call     qword ptr [rip + 0x1658bb]  ; -> [engine+0x380ab0]
+  0021b1f5  488d15e4b81b00         lea      rdx, [rip + 0x1bb8e4]  ; "-random_invariant"
+  0021b1fc  488bc8                 mov      rcx, rax
+  0021b1ff  4c8b00                 mov      r8, qword ptr [rax]
+  0021b202  41ff5058               call     qword ptr [r8 + 0x58]
+  0021b206  85c0                   test     eax, eax
+  0021b208  0f95c1                 setne    cl
+  0021b20b  e810b0f4ff             call     0x180166220  ; -> engine+0x166220
+  0021b210  4533c0                 xor      r8d, r8d
+  0021b213  488d15deb81b00         lea      rdx, [rip + 0x1bb8de]  ; "Sys_ShutdownMemory()"
+  0021b21a  488d0defb81b00         lea      rcx, [rip + 0x1bb8ef]  ; "Sys_InitMemory()"
+  0021b221  e86a920000             call     0x180224490  ; -> engine+0x224490
+  0021b226  e885000000             call     0x18021b2b0  ; -> engine+0x21b2b0
+  0021b22b  4533c0                 xor      r8d, r8d
+  0021b22e  488d15f3b81b00         lea      rdx, [rip + 0x1bb8f3]  ; "Host_Shutdown()"
+  0021b235  488d0dfcb81b00         lea      rcx, [rip + 0x1bb8fc]  ; "Host_Init( s_bIsDedicated )"
+  0021b23c  e84f920000             call     0x180224490  ; -> engine+0x224490
+  0021b241  0fb60df078b700         movzx    ecx, byte ptr [rip + 0xb778f0]
+  0021b248  e8b30cfaff             call     0x1801bbf00  ; -> engine+0x1bbf00
+  0021b24d  803ddc3c680000         cmp      byte ptr [rip + 0x683cdc], 0  ; .data+0x89ef30
+  0021b254  7512                   jne      0x18021b268
+  0021b256  33c0                   xor      eax, eax
+  0021b258  488b5c2430             mov      rbx, qword ptr [rsp + 0x30]
+  0021b25d  488b742438             mov      rsi, qword ptr [rsp + 0x38]
+  0021b262  4883c420               add      rsp, 0x20
+  0021b266  5f                     pop      rdi
+  0021b267  c3                     ret      
+  0021b268  4533c0                 xor      r8d, r8d
+  0021b26b  488d15e6b81b00         lea      rdx, [rip + 0x1bb8e6]  ; "Sys_ShutdownAuthentication()"
+  0021b272  488d0dffb81b00         lea      rcx, [rip + 0x1bb8ff]  ; "Sys_InitAuthentication()"
+  0021b279  e812920000             call     0x180224490  ; -> engine+0x224490
+  0021b27e  e8ddeafbff             call     0x1801d9d60  ; -> engine+0x1d9d60
+  0021b283  33d2                   xor      edx, edx
+  0021b285  33c9                   xor      ecx, ecx
+  0021b287  e864240000             call     0x18021d6f0  ; -> engine+0x21d6f0
+  0021b28c  488b5c2430             mov      rbx, qword ptr [rsp + 0x30]
+  0021b291  b801000000             mov      eax, 1
+  0021b296  488b742438             mov      rsi, qword ptr [rsp + 0x38]
+  0021b29b  4883c420               add      rsp, 0x20
+  0021b29f  5f                     pop      rdi
+  0021b2a0  c3                     ret      

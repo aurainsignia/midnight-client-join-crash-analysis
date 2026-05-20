@@ -1,0 +1,10 @@
+﻿=== Raw disasm at 0xa8170 (probably a thunk) ===
+  000a8170  488d05a9fa6100         lea      rax, [rip + 0x61faa9]
+  000a8177  c3                     ret      
+
+=== Search engine.dll for QWORD pointers to 0x21a890 (ConCommand callback) ===
+  found 0 8-byte hits in .data:
+
+  found 0 8-byte hits in .rdata:
+
+=== Search for 'condump' literal in .rdata ===

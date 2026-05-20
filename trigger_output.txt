@@ -1,0 +1,40 @@
+﻿=== Runtime callback table at tier0+0x61ef0 (16 slots, relocations applied) ===
+  slot[ 0] @ 0x00007ffca1041ef0 = 0x00007ffc298e4c50  lua_shared.dll+0x14c50
+  slot[ 1] @ 0x00007ffca1041ef8 = 0x0000000000000000  
+  slot[ 2] @ 0x00007ffca1041f00 = 0x0000000000000000  
+  slot[ 3] @ 0x00007ffca1041f08 = 0x0000000000000000  
+  slot[ 4] @ 0x00007ffca1041f10 = 0x0000000000000000  
+  slot[ 5] @ 0x00007ffca1041f18 = 0x0000000000000000  
+  slot[ 6] @ 0x00007ffca1041f20 = 0x0000000000000000  
+  slot[ 7] @ 0x00007ffca1041f28 = 0x0000000000000000  
+  slot[ 8] @ 0x00007ffca1041f30 = 0x0000000000000000  
+  slot[ 9] @ 0x00007ffca1041f38 = 0x0000000000000000  
+  slot[10] @ 0x00007ffca1041f40 = 0x0000000000000000  
+  slot[11] @ 0x00007ffca1041f48 = 0x0000000000000000  
+  slot[12] @ 0x00007ffca1041f50 = 0x0000000000000000  
+  slot[13] @ 0x00007ffca1041f58 = 0x0000000000000000  
+  slot[14] @ 0x00007ffca1041f60 = 0x0000000000000000  
+  slot[15] @ 0x00007ffca1041f68 = 0x00007ffc1f32a890  engine.dll+0x21a890
+
+=== Searching for references to tier0+0x7ef0 and 0x1c950 ===
+
+  -- tier0+0x7ef0 (CRASH-REPORT-WRITER) --
+    direct CALL/JMP xrefs:  0
+    LEA xrefs:  7
+      lea r9,... at tier0+0x8134  in fn 0x80c0
+      lea r9,... at tier0+0x81be  in fn 0x80c0
+      lea r9,... at tier0+0x82e3  in fn 0x8270
+      lea r9,... at tier0+0x836d  in fn 0x8270
+      lea r9,... at tier0+0x84af  in fn 0x8430
+      lea r9,... at tier0+0x8535  in fn 0x8430
+      lea rdx,... at tier0+0x8653  in fn 0x85f0
+    QWORD-in-data xrefs:  0
+
+  -- tier0+0x1c950 (WORKER THREAD MAIN) --
+    direct CALL/JMP xrefs:  0
+    LEA xrefs:  1
+      lea r8,... at tier0+0x1d46d  in fn 0x1d408
+    QWORD-in-data xrefs:  0
+
+=== Find xrefs to tier0+0x1c950 (the worker main) ===
+  Found 0 xrefs:

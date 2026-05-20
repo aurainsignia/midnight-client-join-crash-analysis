@@ -1,0 +1,41 @@
+﻿engine.dll @ 0x00007ffc1f110000
+tier0.dll  @ 0x00007ffca0fe0000
+
+=== Walking the call chain via .pdata for both modules ===
+                             frame   RA offset  value                   resolved
+--------------------------------------------------------------------------------------------------------------
+                    __report_failure  +0x0028    0x00007ffc1f44b572  engine.dll+0x33b572
+           _invalid_parameter_walker  +0x0068    0x00007ffc1f46f958  engine.dll+0x35f958
+                              _write  +0x00c8    0x00007ffc1f474851  engine.dll+0x364851
+                        _putc_nolock  +0x00f8    0x00007ffc1f474a1f  engine.dll+0x364a1f
+                       _putc_helper2  +0x0128    0x00007ffc1f462a43  engine.dll+0x352a43
+                   _write_multi_char  +0x0168    0x00007ffc1f461403  engine.dll+0x351403
+                   _output_specifier  +0x01f8    0x00007ffc1f460215  engine.dll+0x350215
+               _output_state_machine  +0x0238    0x00007ffc1f45ff12  engine.dll+0x34ff12
+                  _vfprintf_internal  +0x06f8    0x00007ffc1f45df36  engine.dll+0x34df36
+                vfprintf_lockwrapper  +0x0728    0x00007ffc1f462b8e  engine.dll+0x352b8e
+             __stdio_common_vfprintf  +0x07f8    0x00007ffc1f32bbdc  engine.dll+0x21bbdc
+                  engine_Sys_FPrintf  +0x0848    0x00007ffc1f32a8e1  engine.dll+0x21a8e1
+         dump-loop-parent (0x21a890)  +0x0878    0x00007ffca0fe7fed  tier0.dll+0x7fed
+
+=== Continuing walk into tier0 ===
+
+Full chain walk (programmatic, using .pdata of both modules):
+  #   RA offset  RA value              module         func range                 notes
+------------------------------------------------------------------------------------------------------------------------
+    0  (frame 0)                                                                   engine: __report_failure
+    1  +0x0028    0x00007ffc1f44b572  engine.dll     0x33b4bc..0x33b573         total=0x38
+    2  +0x0068    0x00007ffc1f46f958  engine.dll     0x35f8b8..0x35f9d5         total=0x58
+    3  +0x00c8    0x00007ffc1f474851  engine.dll     0x3647f0..0x3648e7         total=0x28
+    4  +0x00f8    0x00007ffc1f474a1f  engine.dll     0x364970..0x364a3b         total=0x28
+    5  +0x0128    0x00007ffc1f462a43  engine.dll     0x3529e4..0x352ab3         total=0x38
+    6  +0x0168    0x00007ffc1f461403  engine.dll     0x350f68..0x3514a0         total=0x88
+    7  +0x01f8    0x00007ffc1f460215  engine.dll     0x3500f0..0x350471         total=0x38
+    8  +0x0238    0x00007ffc1f45ff12  engine.dll     0x34fe48..0x34ff64         total=0x4b8
+    9  +0x06f8    0x00007ffc1f45df36  engine.dll     0x34df10..0x34df4d         total=0x28
+   10  +0x0728    0x00007ffc1f462b8e  engine.dll     0x352ab4..0x352bd8         total=0xc8
+   11  +0x07f8    0x00007ffc1f32bbdc  engine.dll     0x21bba0..0x21bbe4         total=0x48
+   12  +0x0848    0x00007ffc1f32a8e1  engine.dll     0x21a8ba..0x21a8f9         total=0x28
+   13  +0x0878    0x00007ffca0fe7fed  tier0.dll      0x7ef0..0x8037             total=0x388
+   14  +0x0c08    0x00007ffca0ffca21  tier0.dll      0x1c950..0x1ca57           total=0x38
+   15  +0x0c48    0x00007ffcdb4ce957  kernel32.dll   ?                          (module not loaded for unwind)

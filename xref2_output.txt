@@ -1,0 +1,33 @@
+﻿
+#### CALLERS of engine.dll+0x352ab4 (_vfprintf_outer):  (2 sites)
+   call/jmp at engine.dll+0x21bbd7  (inside func 0x21bba0)
+   call/jmp at engine.dll+0x21bc36  (inside func 0x21bbf0)
+
+#### CALLERS of engine.dll+0x34df10 (vfprintf_lockwrapper):  (1 sites)
+   call/jmp at engine.dll+0x352b89  (inside func 0x352ab4)
+
+#### CALLERS of engine.dll+0x34fe48 (_vfprintf_internal):  (1 sites)
+   call/jmp at engine.dll+0x34df31  (inside func 0x34df10)
+
+#### CALLERS of engine.dll+0x350f68 (_output_specifier):  (2 sites)
+   call/jmp at engine.dll+0x350210  (inside func 0x3500f0)
+   call/jmp at engine.dll+0x350ac4  (inside func 0x350aa8)
+
+#### CALLERS of engine.dll+0x3500f0 (_output_state_machine):  (1 sites)
+   call/jmp at engine.dll+0x34ff0d  (inside func 0x34fe48)
+
+#### CALLERS of engine.dll+0x3529e4 (_write_multi_char):  (4 sites)
+   call/jmp at engine.dll+0x351201  (inside func 0x350f68)
+   call/jmp at engine.dll+0x351317  (inside func 0x350f68)
+   call/jmp at engine.dll+0x3513ab  (inside func 0x350f68)
+   call/jmp at engine.dll+0x3513fe  (inside func 0x350f68)
+
+#### CALLERS of engine.dll+0x3647f0 (_putc_nolock):  (1 sites)
+   call/jmp at engine.dll+0x364a1a  (inside func 0x364970)
+
+#### CALLERS of engine.dll+0x35f8b8 (_write):  (5 sites)
+   call/jmp at engine.dll+0x3475e7  (inside func 0x347454)
+   call/jmp at engine.dll+0x359b2e  (inside func 0x359adc)
+   call/jmp at engine.dll+0x35f864  (inside func 0x35f820)
+   call/jmp at engine.dll+0x36484c  (inside func 0x3647f0)
+   call/jmp at engine.dll+0x3648c7  (inside func 0x3647f0)

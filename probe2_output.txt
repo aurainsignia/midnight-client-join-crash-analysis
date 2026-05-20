@@ -1,0 +1,39 @@
+﻿Static contents of engine+0x6c7c20 (the FILE* slot 0xa8170 returns):
+  
+  qword[0] = 0x0000000000000000
+  qword[1] = 0x0000000000000000
+
+Surrounding .data layout (0x6c7b80 .. 0x6c7c80):
+  0x6c7b80+0x000:    
+  0x6c7b80+0x010:    
+  0x6c7b80+0x020:    
+  0x6c7b80+0x030:    
+  0x6c7b80+0x040:    
+  0x6c7b80+0x050:    
+  0x6c7b80+0x060:    
+  0x6c7b80+0x070:    
+  0x6c7b80+0x080:    
+  0x6c7b80+0x090:    
+  0x6c7b80+0x0a0:    
+  0x6c7b80+0x0b0:    
+  0x6c7b80+0x0c0:    
+  0x6c7b80+0x0d0:    
+  0x6c7b80+0x0e0:    
+  0x6c7b80+0x0f0:    
+
+=== LEA / relative references to engine+0x21a890 ===
+  found 1 lea references
+    lea rcx, ... in fn 0x21b110 at 0x21b15a
+      Context (-16..+48):
+        0021b14a  add      byte ptr [rax - 0x73], cl
+        0021b14d  or       eax, 0x2c5736
+        0021b152  call     qword ptr [rip + 0x1659f8]   ; "pWH"
+        0021b158  mov      dl, 1
+        0021b15a  lea      rcx, [rip - 0x8d1]
+        0021b161  call     qword ptr [rip + 0x165a11]
+        0021b167  mov      r8b, 1
+        0021b16a  lea      rdx, [rip - 0xf81]
+        0021b171  lea      rcx, [rip + 0x683888]
+        0021b178  call     0x1802a1c60
+        0021b17d  test     edi, edi
+        0021b17f  mov      byte ptr [rip + 0x683daa], 0

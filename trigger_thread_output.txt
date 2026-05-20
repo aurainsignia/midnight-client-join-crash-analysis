@@ -1,0 +1,73 @@
+﻿  tier0!CatchAndWriteMiniDump = +0xbce0
+  tier0!CatchAndWriteMiniDumpEx = +0xbd40
+  tier0!CatchAndWriteMiniDumpExForVoidPtrFn = +0xbda0
+  tier0!CatchAndWriteMiniDumpExReturnsInt = +0xbdf0
+  tier0!CatchAndWriteMiniDumpForVoidPtrFn = +0xbe50
+  tier0!Dump_AddCallback = +0x8060
+  tier0!Dump_CallFunction = +0x80c0
+  tier0!Dump_CallMainFunction = +0x8270
+  tier0!Dump_CallWinMainFunction = +0x8430
+  tier0!Dump_CreateDump = +0x85f0
+  tier0!Dump_EnableCrashingOnCrashes = +0x86d0
+  tier0!Dump_EnableFullDumps = +0x8740
+  tier0!Dump_RemoveCallback = +0x8750
+  tier0!Plat_ExitProcess = +0xc940
+  tier0!Plat_ExitProcessWithError = +0xc960
+  tier0!SetMiniDumpFunction = +0xbed0
+  tier0!WriteMiniDump = +0xbf20
+  tier0!WriteMiniDumpUsingExceptionInfo = +0xbf50
+
+Scanning all thread stacks for RAs inside these functions...
+
+=== Threads with RAs inside Dump_* functions ===
+  TID=27040
+     stack 0x000000667c763c08 = 0x00007ffca0fe85b4  (Dump_CallWinMainFunction+0x184)
+     stack 0x000000667c77d048 = 0x00007ffca0fe85b4  (Dump_CallWinMainFunction+0x184)
+
+
+=== Stack traces of threads with rich frames (more than 30 module RAs) ===
+  Found 2 threads with >=20 RAs into game modules
+
+  TID=27040 (285 game RAs, stack size 0x1c728)
+     +0x0010: filesystem_stdio.dll+0x89137
+     +0x0020: filesystem_stdio.dll+0x8565d
+     +0x00a0: tier0.dll+0x1dba5
+     +0x00b0: tier0.dll+0x559e0
+     +0x00d0: tier0.dll+0x1daff
+     +0x0100: tier0.dll+0x45be5
+     +0x0108: tier0.dll+0x559f8
+     +0x0118: tier0.dll+0x7cd9
+     +0x0130: tier0.dll+0x20058
+     +0x0140: tier0.dll+0x728d0
+     +0x0188: tier0.dll+0x728d0
+     +0x0190: tier0.dll+0x7cd9
+     +0x01c0: tier0.dll+0x7cd9
+     +0x01e0: tier0.dll+0x0
+     +0x01e8: tier0.dll+0x7cd9
+     +0x01f0: tier0.dll+0x728d0
+     +0x0240: filesystem_stdio.dll+0x91b9d
+     +0x0290: libcef.dll+0x16a0180
+     +0x02a0: filesystem_stdio.dll+0x9224d
+     +0x02c0: filesystem_stdio.dll+0xa3d9c
+     +0x02e0: gmod.exe+0x0
+     +0x02e8: launcher.dll+0x3780
+
+  TID=16236 (37 game RAs, stack size 0x1430)  <<< CRASH THREAD
+     +0x0018: lua_shared.dll+0x6c1a7
+     +0x0028: engine.dll+0x33b572
+     +0x0058: lua_shared.dll+0x6db9b
+     +0x0068: engine.dll+0x35f958
+     +0x00c8: engine.dll+0x364851
+     +0x00f8: engine.dll+0x364a1f
+     +0x0100: engine.dll+0xdd006e
+     +0x0128: engine.dll+0x352a43
+     +0x0148: engine.dll+0x422c40
+     +0x0168: engine.dll+0x351403
+     +0x0198: engine.dll+0x364815
+     +0x01c8: engine.dll+0x34da1c
+     +0x01d8: engine.dll+0x422c40
+     +0x01f8: engine.dll+0x350215
+     +0x0228: lua_shared.dll+0x6bab5
+     +0x0238: engine.dll+0x34ff12
+     +0x0270: engine.dll+0x38773a
+     +0x02d0: lua_shared.dll+0xbf6c0
